@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+	<header>
+		<title>Demo</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="stylesheet" type="text/css" href="../index.css">
+	</header>
+	<body>
+		<p>
+			<span class="label">Name:</span>
+			<span class="labelValue">John Doe</span>
+		</p>
+		<p>
+			<span class="label">Id:</span>
+			<span class="labelValue">123-456-789</span>
+		</p>
+		<p>
+			<span class="label">GPA:</span>
+			<span class="labelValue" id="GPAValue">3.63</span>
+		</p>
+		<p>
+			<span class="label">Major:</span>
+			<span class="labelValue">ComputerScience</span>
+		</p>
+		<br>
+		<li>
+			<span>Winter 2013</span>
+			<ul>Math 1CB+</ul>
+			<ul>Comp Sci 100A</ul>
+			<ul>Comp Sci 111A-</ul>
+			<span>Fall 2012</span>
+			<ul>Math 1BB</ul>
+			<ul>English 1A</ul>
+			<ul>Comp Sci 2A-</ul>
+			<span>Spring 2012</span>
+			<ul>Math 1AA-</ul>
+			<ul>History 10B+</ul>
+			<ul>Comp Sci 1A</ul>
+		</li>
+        <hr>
+        <p id="dynamicContent"></p>
+        <hr>
+        <p style="margin-top:30px;"><span style="font: 16px/100% 'Microsoft yahei', Arial, Helvetica, sans-serif; padding: .5em 2em .55em; margin-top : 2em; text-shadow: 0 1px 1px rgba(0, 0, 0, .3); -webkit-border-radius: .5em; border-radius: .5em; -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2); color: #fff; border: solid 1px #538312; background: #e8f0de; background: -webkit-gradient(linear, left top, left bottom, from(#7db72f), to(#4e7d0e)); background: -moz-linear-gradient(top, #7db72f, #4e7d0e);" onclick="clickedButton()">greenButton</span></p>
+        <p style="margin-top:60px;"><span style="font: 16px/100% 'Microsoft yahei', Arial, Helvetica, sans-serif; padding: .5em 2em .55em; margin-top : 2em; text-shadow: 0 1px 1px rgba(0, 0, 0, .3); -webkit-border-radius: .5em; border-radius: .5em; -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2); color: #fff; border: solid 1px #343434; background: #ff6015; background: -webkit-gradient(linear, left top, left bottom, from(#fdb72f), to(#fe7d0e));" onclick="clickedOrangeButton()">orangeButton</span></p>
+	</body>
+	<script type="text/javascript">
+		var value = Math.random() * 10 + 0.01;
+		document.getElementById("GPAValue").innerHTML = "" + value.toFixed(2);
+
+        function clickedButton (){
+            jsTest(["Hello objective-c"]);
+        }
+
+        function clickedOrangeButton (){
+        	var data = jsTestInteraction(["1","2"]);
+        	alert("1 + 2 = ?");
+        	document.getElementById("dynamicContent").innerHTML = "1 + 2 = " + data;
+        	alert("1 + 2 = " + data)
+        }
+
+        function ocInteraction(param){
+        	alert(param);
+        	document.getElementById("dynamicContent").innerHTML = "objective-c";
+        	return "I got it. Thanks...";
+        }
+	</script>
+</html>
